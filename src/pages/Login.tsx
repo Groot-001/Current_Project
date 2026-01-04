@@ -1,24 +1,36 @@
 import logo from "../assets/logo.png";
 import eye from "../assets/eye.svg";
+import firstline from "../assets/Vector 636.svg";
 import cicrle1 from "../assets/Ellipse 1184.svg";
-import cicrle2 from "../assets/Ellipse 1184.svg";
-import cicrle3 from "../assets/Ellipse 1184.svg";
-import cicrle4 from "../assets/Ellipse 1184.svg";
-import cicrle5 from "../assets/Ellipse 1184.svg";
-import cicrle6 from "../assets/Ellipse 1184.svg";
-import cicrle7 from "../assets/Ellipse 1184.svg";
+import cicrle2 from "../assets/Ellipse 1186.svg";
+import cicrle3 from "../assets/Ellipse 1187.svg";
+import thirdline from "../assets/Vector 637.svg";
+import secondline from "../assets/Vector 638 (1).svg";
 
 const Login = () => {
   return (
     <>
+      {/* Main Container */}
       <div className="bg-slate-100 w-screen min-h-screen flex justify-center">
-        <div className="">
+        <div>
+          {/* Image Container */}
           <div className="mt-28 mb-8 w-screen flex justify-center">
             <img src={logo} alt="Brand Logo" className="w-44" />
           </div>
-          <div className="w-screen flex justify-center">
+          <div className="w-screen flex justify-center relative">
+            {/* Design images */}
+            <img
+              src={firstline}
+              alt="firstline"
+              className="absolute left-0 w-20"
+            />
+            <img
+              src={cicrle1}
+              alt="circle1"
+              className="absolute w-7 left-28 top-16"
+            />
+            {/* Login Form */}
             <div className="bg-white w-1/3 p-6 rounded-2xl">
-              <img src="" alt="" />
               <h3 className="mb-5">Log In</h3>
               <form action="login form">
                 <div className="flex flex-col gap-2">
@@ -61,6 +73,27 @@ const Login = () => {
               </form>
             </div>
           </div>
+          {/* Design Images */}
+          <img
+            src={secondline}
+            alt="secondline"
+            className="absolute w-28 top-40 right-0"
+          />
+          <img
+            src={cicrle2}
+            alt="circle2"
+            className="absolute w-16 bottom-52 right-14"
+          />
+          <img
+            src={cicrle3}
+            alt="circle3"
+            className="absolute w-7 right-56 bottom-28"
+          />
+          <img
+            src={thirdline}
+            alt="thirdline"
+            className="w-40 absolute bottom-20 left-1/3"
+          />
         </div>
       </div>
     </>
