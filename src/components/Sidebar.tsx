@@ -1,6 +1,12 @@
-
 const Sidebar = () => {
-  return <>Hello there!</>;
+  return (
+    <>
+      {/* Main Container */}
+      <div>
+        <div></div>
+      </div>
+    </>
+  );
 };
 
 export default Sidebar;
