@@ -4,13 +4,13 @@ const Sidebar = () => {
   return (
     <>
       {/* Main Container */}
-      <div>
+      <div className="py-1">
         {/* Containers */}
-        <div className="flex gap-2">
-          <div className="bg-[#A03879] w-1 rounded-2xl"></div>
-          <div className="bg-[#A03879] flex justify-center">
-            <img src={grid} alt="grid icon" className="w-4" />
-            <span>Dashboard</span>
+        <div className="flex gap-2 h-9">
+          <div className="bg-[#A03879] w-1 rounded-3xl"></div>
+          <div className="bg-[#A03879] w-48 flex items-center rounded-md py-2 gap-2">
+            <img src={grid} alt="grid icon" className="w-5 m-1" />
+            <span className="text-[#EBEBEB] text-sm">Dashboard</span>
           </div>
         </div>
       </div>
