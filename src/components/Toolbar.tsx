@@ -18,12 +18,12 @@ const Toolbar = () => {
         </div>
 
         {/* popup Notification */}
-        <div className="rounded-md border-2 w-56 h-9 shadow-[#00000029] shadow-sm absolute right-0 top-4">
-          <div className="flex relative">
+        <div className="rounded-md w-56 h-9 shadow-[0_1px_8px_#00000029] absolute right-0 top-4 bg-[#FFFFFF]">
+          <div className="h-7 flex items-center relative gap-2">
             <img
               src={check}
               alt="Check icon"
-              className="bg-[#07BC0C] rounded-3xl w-4 h-4"
+              className="bg-[#07BC0C] rounded-3xl w-4 h-4 m-1"
             />
             <span className="text-[#5C5C5C]">Success Notification !</span>
             <img
@@ -32,6 +32,7 @@ const Toolbar = () => {
               className="w-3 h-3 absolute right-0 top-0"
             />
           </div>
+          <div className="w-40 border-[#07BC0C] border-2 absolute bottom-0 left-0"></div>
         </div>
 
         {/* Month and filter container */}
