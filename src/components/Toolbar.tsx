@@ -1,4 +1,5 @@
 import downicon from "../assets/chevron-down.svg";
+import calendar from "../assets/calendar.svg";
 
 const Toolbar = () => {
   return (
@@ -14,13 +15,22 @@ const Toolbar = () => {
           </span>
         </div>
         {/* Month and filter container */}
-        <div>
-          <div className="flex">
-            <span>This Month</span>
-            <img src={downicon} alt="Chevron down icon" />
+        <div className="flex justify-between px-5">
+          {/* Month Container */}
+          <div className="w-28 bg-orange-500 rounded-2xl h-7 flex justify-center">
+            <div className="w-24 flex items-center">
+              <span className="text-sm">This Month</span>
+              <img src={downicon} alt="Chevron down icon" />
+            </div>
           </div>
           {/* date filter container */}
-          <div></div>
+          <div className="flex">
+            <span>Filter by Date</span>
+            <div className="flex">
+              <span>24/02/2022</span>
+              <img src={calendar} alt="Calendar icon" />
+            </div>
+          </div>
         </div>
       </div>
     </>
