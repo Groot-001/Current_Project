@@ -7,9 +7,9 @@ const Toolbar = () => {
   return (
     <>
       {/* Main Container */}
-      <div className="bg-white rounded-2xl w-3/4 relative">
+      <div className="bg-white rounded-2xl w-3/4 relative shadow-[0_0_16px_#0000000A]">
         {/* Ttile Container */}
-        <div className="pb-3 pl-5 pt-8 flex flex-col gap-3">
+        <div className="pl-5 pt-7 flex flex-col gap-2">
           {/* In tailwind css the heading doesnot have any values by default, its like a normal text */}
           <h1 className="text-xl text-[#3B3B3B]">My Dashboard</h1>
           <span className=" text-[#5C5C5C]">
@@ -18,7 +18,7 @@ const Toolbar = () => {
         </div>
 
         {/* popup Notification */}
-        <div className="rounded-md w-56 h-9 shadow-[0_1px_8px_#00000029] absolute right-0 top-4 bg-[#FFFFFF]">
+        <div className="rounded-md w-56 h-9 shadow-[0_2px_8px_#00000029] absolute right-0 top-4 bg-[#FFFFFF]">
           <div className="h-7 flex items-center relative gap-2">
             <img
               src={check}
@@ -36,7 +36,7 @@ const Toolbar = () => {
         </div>
 
         {/* Month and filter container */}
-        <div className="flex justify-between px-5 pb-3 pt-7">
+        <div className="flex justify-between px-5 pb-3 pt-3">
           {/* Month Container */}
           <div className="w-28 border-[0.5px] rounded-2xl h-7 flex justify-center">
             <div className="w-24 flex items-center gap-2 p-1">
