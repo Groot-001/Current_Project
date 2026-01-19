@@ -1,7 +1,8 @@
 // import Header from "../components/Header";
 // import Sidebar from "../components/Sidebar";
 // import Toolbar from "../components/Toolbar";
-import Summary from "../components/Summary";
+// import Summary from "../components/Summary";
+import LeadTable from "../components/LeadTable";
 
 const Dashboard = () => {
   return (
@@ -11,7 +12,8 @@ const Dashboard = () => {
         {/* <Header /> */}
         {/* <Sidebar /> */}
         {/* <Toolbar /> */}
-        <Summary />
+        {/* <Summary /> */}
+        <LeadTable />
       </div>
     </>
   );
