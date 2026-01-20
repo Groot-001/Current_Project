@@ -1,17 +1,19 @@
 const LeadTable = () => {
   return (
     <>
-      <div className="w-full bg-[#FFFFFF] rounded-2xl flex flex-col gap-6 shadow-[0_0_16px_0_#0000000A] p-6">
+      <div className="w-full bg-[#FFFFFF] rounded-2xl flex flex-col gap-6 shadow-[0_0_16px_#0000000A] p-6">
         <div className="w-full flex flex-col gap-3 ">
+          {/* Ttile container */}
           <div>
-            <span className="text-[#000000] font-normal">
+            <span className="text-[#000000] font-medium text-sm leading-[22px]">
               New Leads Assigned
             </span>
           </div>
-          <div>
-            <table className="w-full ">
-              <thead>
-                <tr>
+          {/* Table data container */}
+          <div className="flex flex-col gap-1">
+            <table className="w-full">
+              <thead className="bg-[#FFFFFF] border-t-[0.4px] rounded-t-lg border-[#F6EBF2] ">
+                <tr className="font-normal text-[#2E2E2E] text-sm leading-[22px]">
                   <th>S.N</th>
                   <th>Lead Name</th>
                   <th>Phone No</th>
