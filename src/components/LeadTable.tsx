@@ -1,30 +1,30 @@
 const LeadTable = () => {
   return (
     <>
-      <div className="w-3/6 mx-auto bg-[#FFFFFF] rounded-2xl shadow-[0_0_16px_#0000000A] p-6">
-        <div className="flex flex-col gap-6">
+      <div className="max-w-[755px] w-full bg-[#FFFFFF] rounded-2xl shadow-[0_0_16px_#0000000A] p-6">
+        <div className="flex flex-col">
           {/* Ttile container */}
-          <div>
-            <span className="text-[#000000] font-medium text-sm leading-[22px]">
+          <div className="pb-3">
+            <span className="text-[#000000] font-normal leading-[22px] text-sm">
               New Leads Assigned
             </span>
           </div>
           {/* Table data container */}
-          <div className="bg-[#FFFFFF] border-[0.4px] border-b-0 border-[#F6EBF2] rounded-t-lg">
+          <div className="border-[0.4px] border-b-0 border-[#F6EBF2] rounded-t-lg">
             <table className="w-full">
-              <thead>
-                <tr>
-                  <th className="py-2 px-5">S.N</th>
-                  <th className="py-2 px-5">Lead Name</th>
-                  <th className="py-2 px-5">Phone No</th>
-                  <th className="py-2 px-5">Source</th>
-                  <th className="py-2 px-5">Service</th>
-                  <th className="py-2 px-5">Address</th>
-                  <th className="py-2 px-5">Created At</th>
+              <thead className="text-[#2E2E2E] font-normal leading-[20px] text-sm">
+                <tr className="">
+                  <th className="py-[10px] px-5">S.N</th>
+                  <th className="py-[10px] px-5">Lead Name</th>
+                  <th className="py-[10px] px-5">Phone No</th>
+                  <th className="py-[10px] px-5">Source</th>
+                  <th className="py-[10px] px-5">Service</th>
+                  <th className="py-[10px] px-5">Address</th>
+                  <th className="py-[10px] px-5">Created At</th>
                 </tr>
               </thead>
 
-              <tbody>
+              <tbody className="font-light text-[#585858] text-sm leading-[20px]">
                 <tr className="bg-[#F6EBF22E] border-[#F6EBF2] border-[0.4px] border-l-0 border-r-0 border-b-0">
                   <td className="px-5 py-2">01</td>
                   <td className="px-5 py-2">Sanjay Thapa</td>
@@ -94,4 +94,3 @@ const LeadTable = () => {
 };
 
 export default LeadTable;
-

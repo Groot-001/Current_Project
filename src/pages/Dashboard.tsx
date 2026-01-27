@@ -9,11 +9,13 @@ const Dashboard = () => {
     <>
       {/* Main Container */}
       <div className="bg-slate-100 min-h-screen">
-        {/* <Header /> */}
-        {/* <Sidebar /> */}
-        {/* <Toolbar /> */}
-        {/* <Summary /> */}
-        <LeadTable />
+        <div className="max-w-6xl mx-auto px-4">
+          {/* <Header /> */}
+          {/* <Sidebar /> */}
+          {/* <Toolbar /> */}
+          {/* <Summary /> */}
+          <LeadTable />
+        </div>
       </div>
     </>
   );
