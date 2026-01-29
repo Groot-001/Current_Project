@@ -2,7 +2,8 @@
 // import Sidebar from "../components/Sidebar";
 // import Toolbar from "../components/Toolbar";
 // import Summary from "../components/Summary";
-import LeadTable from "../components/LeadTable";
+// import LeadTable from "../components/LeadTable";
+import TasksOverview from "../components/TasksOverview";
 
 const Dashboard = () => {
   return (
@@ -14,7 +15,8 @@ const Dashboard = () => {
           {/* <Sidebar /> */}
           {/* <Toolbar /> */}
           {/* <Summary /> */}
-          <LeadTable />
+          {/* <LeadTable /> */}
+          <TasksOverview />
         </div>
       </div>
     </>
