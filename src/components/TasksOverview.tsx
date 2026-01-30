@@ -4,19 +4,29 @@ const TasksOverview = () => {
   return (
     <>
       {/* Main Container */}
-      <div>
-        {/* Sub containers */}
-        <div className="px-6 pt-6 pb-4">
-          <div className="flex">
-            <img
-              src={alert_circle}
-              alt="alert-circle icon"
-              className="w-5 h-5"
-            />
-            <span>Overdue Tasks</span>
+      <div className="flex flex-col rounded-t-[10px] gap-6">
+        {/* Overdue Tasks */}
+        <div className="flex flex-col rounded-[10px] border-[0.8px] bg-[#FFFFFF] shadow-[0_0_16px_-1px_rgba(22, 22, 22, 0.04)]">
+          {/* The rgba value is the arbitary value in the shadow */}
+
+          {/* Sub Containers */}
+          <div className="">
+            <div>
+              <img
+                src={alert_circle}
+                alt="alert-circle icon"
+                className="w-5 h-5"
+              />
+              <span>Overdue Tasks</span>
+            </div>
+            <span>Tasks that are past their due date</span>
           </div>
-          <span>Tasks that are past their due date</span>
+          <div>second</div>
+          <div>third</div>
         </div>
+        {/* 
+        box-shadow: 0px 0px 16px -1px #1616160A;
+ */}
         {/* sub */}
         <div>2</div>
         {/* sub */}
