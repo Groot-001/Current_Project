@@ -1,10 +1,12 @@
 import alert_circle from "../assets/alert-circle.svg";
+import clock from "../assets/clock.svg";
+import external_link from "../assets/external-link.svg";
 
 const TasksOverview = () => {
   return (
     <>
       {/* Main Container */}
-      <div className="max-w-xs rounded-t-[10px]">
+      <div className="max-w-[350px] rounded-t-[10px]">
         {/* Overdue Tasks */}
         <div className="flex flex-col rounded-[10px] border-[0.8px] bg-[#FFFFFF] shadow-[0_0_16px_-1px_rgba(22, 22, 22, 0.04)]">
           {/* The rgba value is the arbitary value in the shadow */}
@@ -34,10 +36,10 @@ const TasksOverview = () => {
             {/* first box of 2nd cont of 1st cont*/}
             <div className="flex flex-col bg-[#F6EBF23D] border-[#FFF1EF] border-[0.8px] rounded-[10px] p-4 gap-3">
               {/* inner cont for text / Main div / upper one */}
-              <div className="flex justify-between pr-0 items-start">
+              <div className="flex justify-between items-start">
                 {/* upper one for wrapping those 2 text box vertically / left one */}
                 <div className="flex flex-col gap-1">
-                  <div>
+                  <div className="max-w-[125px]">
                     <span className="text-[#3B3B3B] font-light text-sm tracking-normal">
                       Follow-up on initial consultation
                     </span>
@@ -53,15 +55,35 @@ const TasksOverview = () => {
 
                 {/* text for in top corner / Right one */}
                 <div className="px-2 pt-[2px] pb-1 bg-[#FFD2CE] rounded-full">
-                  <span className="text-[#B00020] font-light text-[10px] leading-[16px] tracking-normal whitespace-nowrap">
+                  <span className="text-[#B00020] font-light text-[10px] leading-[16px]">
                     2 days overdue
                   </span>
                 </div>
               </div>
 
               {/* lower container for 2 buttons*/}
-              <div>
-                <span>second lower for 2 button</span>
+              <div className="flex gap-2 items-end">
+                <div className="flex rounded-full px-5 py-[6px] gap-[10px] bg-[#A03879] items-center">
+                  <img
+                    src={external_link}
+                    alt="external_link icon"
+                    className="w-[14px] h-[14px]"
+                  />
+                  <button className="text-[#FFFFFF] font-normal text-sm tracking-normal text-center">
+                    Open
+                  </button>
+                </div>
+
+                <div className="flex rounded-full px-6 py-[6px] gap-[10px] border-[#A03879] border-[0.6px] items-center">
+                  <img
+                    src={clock}
+                    alt="clock icon"
+                    className="w-[14px] h-[14px]"
+                  />
+                  <button className="text-[#A03879] font-normal text-sm tracking-normal text-center">
+                    Reschedule
+                  </button>
+                </div>
               </div>
             </div>
 
