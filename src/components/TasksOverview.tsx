@@ -1,5 +1,5 @@
 import alert_circle from "../assets/alert-circle.svg";
-import clock from "../assets/clock.svg";
+import clock from "../assets/purple_clock.svg";
 import external_link from "../assets/external-link.svg";
 
 const TasksOverview = () => {
@@ -62,8 +62,8 @@ const TasksOverview = () => {
               </div>
 
               {/* lower container for 2 buttons*/}
-              <div className="flex gap-2 items-end">
-                <div className="flex rounded-full px-5 py-[6px] gap-[10px] bg-[#A03879] items-center">
+              <div className="flex gap-2 items-start">
+                <div className="flex rounded-full px-10 py-[6px] gap-[10px] bg-[#A03879] items-center">
                   <img
                     src={external_link}
                     alt="external_link icon"
