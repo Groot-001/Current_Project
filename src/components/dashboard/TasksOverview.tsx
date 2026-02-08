@@ -36,6 +36,13 @@ const TasksOverview = () => {
             <TaskCard />
             <TaskCard />
           </div>
+
+          {/* Third container */}
+          <div className="rounded-b-[10px] border-t-[0.8px] border-[#F3F4F6] px-4 py-3">
+            <span className="font-normal text-sm tracking-normal text-[#A03879] text-center">
+              View all Follow Up tasks →
+            </span>
+          </div>
         </div>
 
         {/* sub */}
