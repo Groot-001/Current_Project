@@ -3,7 +3,7 @@
 // import Toolbar from "../components/Toolbar";
 // import Summary from "../components/Summary";
 // import LeadTable from "../components/LeadTable";
-import TasksOverview from "../components/TasksOverview";
+import TasksOverview from "../components/dashboard/TasksOverview";
 
 const Dashboard = () => {
   return (

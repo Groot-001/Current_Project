@@ -1,7 +1,7 @@
-import users from "../assets/boldusers.svg";
-import phone from "../assets/phone.svg";
-import appointment from "../assets/appointmentpink.svg";
-import check from "../assets/checkgreen.svg";
+import users from "../../assets/boldusers.svg";
+import phone from "../../assets/phone.svg";
+import appointment from "../../assets/appointmentpink.svg";
+import check from "../../assets/checkgreen.svg";
 
 const Summary = () => {
   return (

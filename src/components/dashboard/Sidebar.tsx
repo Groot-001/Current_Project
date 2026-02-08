@@ -1,15 +1,15 @@
-import grid from "../assets/grid.svg";
-import users from "../assets/users.svg";
-import book from "../assets/book.svg";
-import appointment from "../assets/awppontment.svg";
-import deal from "../assets/deal.svg";
-import clock from "../assets/clock.svg";
-import calender_clock from "../assets/calendar clock.svg";
-import target from "../assets/target.svg";
-import user_group from "../assets/user group.svg";
-import report from "../assets/file-text.svg";
-import setting from "../assets/settings.svg";
-import down from "../assets/chevron-down.svg";
+import grid from "../../assets/grid.svg";
+import users from "../../assets/users.svg";
+import book from "../../assets/book.svg";
+import appointment from "../../assets/awppontment.svg";
+import deal from "../../assets/deal.svg";
+import clock from "../../assets/clock.svg";
+import calender_clock from "../../assets/calendar clock.svg";
+import target from "../../assets/target.svg";
+import user_group from "../../assets/user group.svg";
+import report from "../../assets/file-text.svg";
+import setting from "../../assets/settings.svg";
+import down from "../../assets/chevron-down.svg";
 
 const Sidebar = () => {
   return (

@@ -1,7 +1,7 @@
-import downicon from "../assets/chevron-down.svg";
-import calendar from "../assets/calendar.svg";
-import check from "../assets/check.svg";
-import x from "../assets/x.svg";
+import downicon from "../../assets/chevron-down.svg";
+import calendar from "../../assets/calendar.svg";
+import check from "../../assets/check.svg";
+import x from "../../assets/x.svg";
 
 const Toolbar = () => {
   return (

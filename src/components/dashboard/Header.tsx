@@ -1,9 +1,9 @@
-import logo from "../assets/logo.png";
-import hamburger from "../assets/hamburger.svg";
-import minimize from "../assets/minimize.svg";
-import bell from "../assets/bell.svg";
-import profileimage from "../assets/short image.svg";
-import down from "../assets/chevron-down.svg";
+import logo from "../../assets/logo.png";
+import hamburger from "../../assets/hamburger.svg";
+import minimize from "../../assets/minimize.svg";
+import bell from "../../assets/bell.svg";
+import profileimage from "../../assets/short image.svg";
+import down from "../../assets/chevron-down.svg";
 
 const Header = () => {
   return (
