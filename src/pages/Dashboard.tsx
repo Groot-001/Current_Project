@@ -3,7 +3,8 @@
 // import Toolbar from "../components/Toolbar";
 // import Summary from "../components/Summary";
 // import LeadTable from "../components/LeadTable";
-import TasksOverview from "../components/dashboard/TasksOverview";
+// import TasksOverview from "../components/dashboard/TasksOverview";
+import FollowUpTaskTable from "../components/dashboard/FollowUpTaskTable";
 
 const Dashboard = () => {
   return (
@@ -16,7 +17,8 @@ const Dashboard = () => {
           {/* <Toolbar /> */}
           {/* <Summary /> */}
           {/* <LeadTable /> */}
-          <TasksOverview />
+          {/* <TasksOverview /> */}
+          <FollowUpTaskTable />
         </div>
       </div>
     </>
