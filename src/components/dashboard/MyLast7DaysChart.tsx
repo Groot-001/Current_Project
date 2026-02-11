@@ -42,9 +42,9 @@ export default function MyLast7DaysChart() {
           data={data}
           margin={{ left: -25, bottom: 0, right: 10, top: 10 }}
         >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="day" />
-          <YAxis />
+          <CartesianGrid strokeDasharray="3 3" stroke="#F0F0F0" />
+          <XAxis dataKey="day" tick={{ fill: "#9CA3AF" }} />
+          <YAxis tick={{ fill: "#9CA3AF" }} />
           <Tooltip />
           <Line
             type="monotone"

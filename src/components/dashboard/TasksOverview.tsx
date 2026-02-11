@@ -1,5 +1,6 @@
 import alert_circle from "../../assets/alert-circle.svg";
 import upgoing_icon from "../../assets/upgoing.svg";
+import red_goal_icon from "../../assets/red goal.svg";
 import MyLast7DaysChart from "./MyLast7DaysChart";
 import MyLast7DaysLegendSection from "./MyLast7DaysLegendSection";
 import TaskCard from "./TaskCard";
@@ -74,10 +75,60 @@ const TasksOverview = () => {
           </div>
         </div>
 
-        {/* sub */}
-        <div>3</div>
-        {/* sub */}
-        <div>4</div>
+        {/* Third container */}
+        <div className="rounded-[15px] bg-[#FFFFFF] shadow-[0px_0px_16px_0px_#0000000A]">
+          <div className="rounded-t-[10px] border-b-[0.8px] border-[#F3F4F6] flex flex-col gap-1 px-6 pt-6 pb-[16px]">
+            <div className="flex gap-2 items-center">
+              <img
+                src={red_goal_icon}
+                alt="Red Goal Icon"
+                className="w-5 h-5"
+              />
+              <span className="font-medium text-[18px] leading-[26px] text-[#292929]">
+                Today's Goals
+              </span>
+            </div>
+            <span className="font-light text-sm text-[#6A7282]">
+              Your progress towards daily targets
+            </span>
+          </div>
+
+          <div className="p-6 flex flex-col gap-6">
+            <div className="flex flex-col gap-2">
+              <div className="flex justify-between">
+                <span className="font-light text-sm text-[#3B3B3B] tracking-normal">
+                  Calls Logged
+                </span>
+                <span className="text-[#0A0A0A] font-normal text-sm tracking-normal">
+                  46 / 80
+                </span>
+              </div>
+              <div className="bg-[#F3F4F6] rounded-full pr-[108px]">
+                <div className="bg-[#A03879] rounded-full h-2"></div>
+              </div>
+              <span className="font-light text-xs text-[#8D8D8D]">
+                34 more calls logged to hit today's goal
+              </span>
+            </div>
+
+            <div className="flex flex-col gap-2">
+              <div className="flex justify-between">
+                <span className="font-light text-sm text-[#3B3B3B]">
+                  Appointments Booked
+                </span>
+                <span className="font-normal text-sm text-[#0A0A0A]">
+                  3 / 6
+                </span>
+              </div>
+              <div className="bg-[#F3F4F6] rounded-full pr-[127px]">
+                <div className="rounded-full bg-[#38D8AE] h-2"></div>
+              </div>
+              <span className="font-light text-xs text-[#8D8D8D] pb-5">
+                3 more appointments booked (l1) to hit today's goal
+              </span>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
