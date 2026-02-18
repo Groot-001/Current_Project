@@ -104,7 +104,7 @@ const FollowUpTaskTable = () => {
 
           <div className="border-[0.4px] border-[#F6EBF2] border-b-0 rounded-t-[10px] bg-[#FFFFFF]">
             <table className="w-full">
-              <thead className="">
+              <thead>
                 {/* So basically the table is one structure and thead is for the table header part, the tr is table row which means we are creating a single row for the header. Inside that row we are craeting th which means table header which is header cell like the placeholder for the data of that row */}
                 <tr className="border-[#F6EBF2] border-b-[0.4px]">
                   {FollowUpTaskColumn.map((col) => (
@@ -120,20 +120,33 @@ const FollowUpTaskTable = () => {
 
               {/* In the header we have used tr first because we only need one row and all the things will be inside that row only but in the body we need more rows which will be defined by the number of objects in the array so we are mapping the leads array to define the number of rows being used. */}
               <tbody className="">
-                {leads.map((lead, ind) => (
+                {leads.map((lead, ind) => {
                   // Here we are mapping the leads to define the number of rows used in the table.
 
-                  <tr key={lead.id} className="">
-                    {FollowUpTaskColumn.map((col) => (
-                      // Here we are using the followuptaskcolumn because it will decide the number of cols used in the table and for each table we are creating a description cell like placeholder.
-                      <td key={col.key} className={<></>}>
-                        {/* here we are using the col.key === index so that because the key is index which will not match any property from lead so if the value is index then we will just show the index number which will be S.N */}
-                        {col.key === "index" ? ind + 1 : (lead as any)[col.key]}
-                        {/* lead[col.key],this is called dynamic accessing of the data. */}
-                      </td>
-                    ))}
-                  </tr>
-                ))}
+                  let rowStyle = "";
+                  if (ind === 0 || ind === 2 || ind === 4)
+                    rowStyle = "bg-[#F6EBF22E]";
+                  else if (ind === 3) rowStyle = "bg-[#F6EBF2]";
+                  else rowStyle = "bg-[#FFFFFF]";
+
+                  return (
+                    <tr key={lead.id} className={rowStyle}>
+                      {FollowUpTaskColumn.map((col) => (
+                        // Here we are using the followuptaskcolumn because it will decide the number of cols used in the table and for each table we are creating a description cell like placeholder.
+                        <td
+                          key={col.key}
+                          className="font-light text-sm text-[#585858] px-5 py-[10px]"
+                        >
+                          {/* here we are using the col.key === index so that because the key is index which will not match any property from lead so if the value is index then we will just show the index number which will be S.N */}
+                          {col.key === "index"
+                            ? ind + 1
+                            : (lead as any)[col.key]}
+                          {/* lead[col.key],this is called dynamic accessing of the data. */}
+                        </td>
+                      ))}
+                    </tr>
+                  );
+                })}
               </tbody>
             </table>
           </div>
