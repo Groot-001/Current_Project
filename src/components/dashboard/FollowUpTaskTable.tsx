@@ -72,14 +72,13 @@ const FollowUpTaskColumn: Column[] = [
     key: "name",
   },
   {
-    header: "PhoneNo",
-    key: "phone",
-  },
-  {
     header: "Up Coming",
     key: "followUpDate",
   },
-
+  {
+    header: "PhoneNo",
+    key: "phone",
+  },
   {
     header: "Source",
     key: "source",
@@ -99,16 +98,22 @@ const FollowUpTaskTable = () => {
     <>
       <div className="rounded-[21px] p-6 bg-[#FFFFFF] shadow-[0px_0px_16px_0px_#0000000A]">
         <div className="flex flex-col gap-3">
-          <span className="font-normal text-[14px] leading-[22px] text-[#000000]">
+          <span className="font-normal text-[14px] leading-[22px] text-[#000000] tracking-normal">
             Follow-up Tasks Today
           </span>
-          <div className="">
+
+          <div className="border-[0.4px] border-[#F6EBF2] border-b-0 rounded-t-[10px] bg-[#FFFFFF]">
             <table className="w-full">
-              <thead>
+              <thead className="">
                 {/* So basically the table is one structure and thead is for the table header part, the tr is table row which means we are creating a single row for the header. Inside that row we are craeting th which means table header which is header cell like the placeholder for the data of that row */}
-                <tr>
+                <tr className="border-[#F6EBF2] border-b-[0.4px]">
                   {FollowUpTaskColumn.map((col) => (
-                    <th key={col.key}>{col.header}</th>
+                    <th
+                      key={col.key}
+                      className="font-normal text-sm text-[#2E2E2E] px-5 py-[10px]"
+                    >
+                      {col.header}
+                    </th>
                   ))}
                 </tr>
               </thead>
@@ -121,7 +126,7 @@ const FollowUpTaskTable = () => {
                   <tr key={lead.id} className="">
                     {FollowUpTaskColumn.map((col) => (
                       // Here we are using the followuptaskcolumn because it will decide the number of cols used in the table and for each table we are creating a description cell like placeholder.
-                      <td key={col.key}>
+                      <td key={col.key} className={}>
                         {/* here we are using the col.key === index so that because the key is index which will not match any property from lead so if the value is index then we will just show the index number which will be S.N */}
                         {col.key === "index" ? ind + 1 : (lead as any)[col.key]}
                         {/* lead[col.key],this is called dynamic accessing of the data. */}
