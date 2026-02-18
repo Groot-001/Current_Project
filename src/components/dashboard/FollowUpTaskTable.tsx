@@ -126,7 +126,7 @@ const FollowUpTaskTable = () => {
                   <tr key={lead.id} className="">
                     {FollowUpTaskColumn.map((col) => (
                       // Here we are using the followuptaskcolumn because it will decide the number of cols used in the table and for each table we are creating a description cell like placeholder.
-                      <td key={col.key} className={}>
+                      <td key={col.key} className={<></>}>
                         {/* here we are using the col.key === index so that because the key is index which will not match any property from lead so if the value is index then we will just show the index number which will be S.N */}
                         {col.key === "index" ? ind + 1 : (lead as any)[col.key]}
                         {/* lead[col.key],this is called dynamic accessing of the data. */}
