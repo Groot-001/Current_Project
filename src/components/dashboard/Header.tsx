@@ -8,26 +8,30 @@ import down from "../../assets/chevron-down.svg";
 const Header = () => {
   return (
     <>
-      <div className="flex justify-between px-8 py-4">
-        <div className="flex justify-center">
-          <img src={logo} alt="Logo Image" className="w-44 mx-3" />
-          <img src={hamburger} alt="hamburger icon" className="w-6" />
+      <div className="flex justify-between px-10 pt-5 pb-[10px]">
+        <div className="flex items-center gap-8">
+          <img src={logo} alt="Logo Image" className="w-[169px] h-[66px]" />
+          <img src={hamburger} alt="hamburger icon" className="w-6 h-6" />
         </div>
-        <div className="flex justify-center items-center gap-2">
-          <div className="flex justify-around items-center gap-6 p-4 relative">
-            <img src={minimize} alt="minimize icon" className="w-4" />
-            <img
-              src={bell}
-              alt="bell"
-              className="w-8 h-8 p-2 rounded-md bg-[#FFF1EF]"
-            />
-            <div className="bg-[#FF6F61] rounded-lg w-7 h-4 text-white absolute top-2 right-2 text-xs flex justify-center px-1">
-              <span>99+</span>
+
+        <div className="flex items-center gap-[32px] relative">
+          <img src={minimize} alt="minimize icon" className="w-5 h-5" />
+          <div className="rounded-lg p-2 bg-[#FFF1EF]">
+            <img src={bell} alt="bell" className="w-5 h-5" />
+            <div className="bg-[#FF6F61] rounded-[20px] py-[2px] px-[6px] absolute top-[8px] left-[68px] flex items-center">
+              <span className="text-[#FFFFFF] font-medium text-[10px] leading-3">
+                99+
+              </span>
             </div>
           </div>
-          <div className="flex justify-center items-center bg-[#FFF1EF] rounded-3xl p-1">
-            <img src={profileimage} alt="profile icon" className="w-8" />
-            <img src={down} alt="Down Arrow" className="w-5 mx-2" />
+          {/* Third image */}
+          <div className="flex p-[6px] gap-[10px] bg-[#FFF1EF] rounded-full items-center">
+            <img
+              src={profileimage}
+              alt="profile icon"
+              className="w-[42px] h-[42px]"
+            />
+            <img src={down} alt="Down Arrow" className="w-6 h-6" />
           </div>
         </div>
       </div>
