@@ -119,7 +119,7 @@ const FollowUpTaskTable = () => {
               </thead>
 
               {/* In the header we have used tr first because we only need one row and all the things will be inside that row only but in the body we need more rows which will be defined by the number of objects in the array so we are mapping the leads array to define the number of rows being used. */}
-              <tbody className="">
+              <tbody>
                 {leads.map((lead, ind) => {
                   // Here we are mapping the leads to define the number of rows used in the table.
 
@@ -135,7 +135,7 @@ const FollowUpTaskTable = () => {
                         // Here we are using the followuptaskcolumn because it will decide the number of cols used in the table and for each table we are creating a description cell like placeholder.
                         <td
                           key={col.key}
-                          className="font-light text-sm text-[#585858] px-5 py-[10px]"
+                          className="font-light text-sm text-[#585858] px-5 py-5"
                         >
                           {/* here we are using the col.key === index so that because the key is index which will not match any property from lead so if the value is index then we will just show the index number which will be S.N */}
                           {col.key === "index"
