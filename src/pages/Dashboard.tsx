@@ -11,7 +11,6 @@ const Dashboard = () => {
     <>
       <div className="bg-slate-100 min-h-screen w-full flex flex-col">
         <Header />
-        <hr />
 
         <div className="flex flex-1">
           <Sidebar />

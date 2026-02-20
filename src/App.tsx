@@ -1,13 +1,8 @@
-import Dashboard from "./pages/Dashboard";
-// import Login from "./pages/Login";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./routes/routes";
 
 function App() {
-  return (
-    <>
-      {/* <Login /> */}
-      <Dashboard />
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

@@ -8,7 +8,7 @@ import down from "../../assets/chevron-down.svg";
 const Header = () => {
   return (
     <>
-      <div className="flex justify-between px-10 pt-5 pb-[10px]">
+      <div className="flex justify-between px-10 pt-5 pb-[10px] border-b-[0.6px] border-[#EBEBEB] bg-[#FFFFFF] ">
         <div className="flex items-center gap-8">
           <img src={logo} alt="Logo Image" className="w-[169px] h-[66px]" />
           <img src={hamburger} alt="hamburger icon" className="w-6 h-6" />
