@@ -6,65 +6,71 @@ import check from "../../assets/checkgreen.svg";
 const Summary = () => {
   return (
     <>
-      {/* Main Container */}
-      <div className="w-3/4 flex gap-6">
-        {/* Particular containers */}
-        <div className="w-64 h-32 shadow-[0_0_16px_#0000000A] rounded-2xl py-8 px-5 bg-white">
-          {/* semi Container */}
-          <div className="w-[220px] h-14 flex items-center gap-[10px]">
-            <div className="w-40 h-14 flex flex-col">
-              <h1 className="text-3xl font-semibold">220</h1>
-              <span className="text-[#8D8D8D] text-sm">New Leads Assigned</span>
+      <div className="flex gap-6 ">
+        <div className="shadow-[0px_0px_16px_0px_#0000000A] bg-[#FFFFFF] rounded-[20px] p-[22px]">
+          <div className="flex gap-[10px] items-center">
+            <div className="flex flex-col gap-[2px]">
+              <h1 className="text-[28px] leading-10 font-semibold text-[#3A3A3A]">
+                220
+              </h1>
+              <span className="text-[#8D8D8D] text-sm font-light">
+                New Leads Assigned
+              </span>
             </div>
-            <div className="w-11 h-11 rounded-3xl p-2 bg-[#EBEBEB] flex  justify-center items-center">
+            <div className="p-[10px] bg-[#EBEBEB] rounded-[22px]">
               <img src={users} alt="users icon" className="w-6 h-6" />
             </div>
           </div>
         </div>
 
-        <div className="w-64 h-32 shadow-[0_0_16px_#0000000A] rounded-2xl py-8 px-5 bg-white">
-          {/* semi Container */}
-          <div className="w-[220px] h-14 flex items-center gap-[10px]">
-            <div className="w-40 h-14 flex flex-col">
-              <h1 className="text-3xl font-semibold">220</h1>
-              <span className="text-[#8D8D8D] text-sm">Follow-up Task</span>
+        <div className="shadow-[0px_0px_16px_0px_#0000000A] bg-[#FFFFFF] rounded-[20px] p-[22px]">
+          <div className="flex gap-[10px] items-center">
+            <div className="flex flex-col gap-[2px]">
+              <h1 className="text-[28px] leading-10 font-semibold text-[#3A3A3A]">
+                220
+              </h1>
+              <span className="text-[#8D8D8D] text-sm font-light">
+                Follow-up Task
+              </span>
             </div>
-            <div className="w-11 h-11 rounded-3xl p-2 bg-[#EFF6FF] flex  justify-center items-center">
-              <img src={phone} alt="phone icon" className="w-6 h-6" />
+            <div className="p-[10px] bg-[#EFF6FF] rounded-[22px]">
+              <img src={phone} alt="Phone icon" className="w-6 h-6" />
             </div>
           </div>
         </div>
 
-        <div className="w-64 h-32 shadow-[0_0_16px_#0000000A] rounded-2xl py-8 px-5 bg-white">
-          {/* semi Container */}
-          <div className="w-[220px] h-14 flex items-center gap-[10px]">
-            <div className="w-40 h-14 flex flex-col">
-              <h1 className="text-3xl font-semibold">220</h1>
-              <span className="text-[#8D8D8D] text-sm">
+        <div className="shadow-[0px_0px_16px_0px_#0000000A] bg-[#FFFFFF] rounded-[20px] p-[22px]">
+          <div className="flex gap-[10px] items-center">
+            <div className="flex flex-col gap-[2px]">
+              <h1 className="text-[28px] leading-10 font-semibold text-[#3A3A3A]">
+                220
+              </h1>
+              <span className="text-[#8D8D8D] text-sm font-light">
                 Appointments Booked
               </span>
             </div>
-            <div className="w-11 h-11 rounded-3xl p-2 bg-[#FAF5FF] flex  justify-center items-center">
+            <div className="p-[10px] bg-[#FAF5FF] rounded-[22px]">
               <img
                 src={appointment}
-                alt="appointment icon"
+                alt="Appointment icon"
                 className="w-6 h-6"
               />
             </div>
           </div>
         </div>
 
-        <div className="w-64 h-32 shadow-[0_0_16px_#0000000A] rounded-2xl py-8 px-5 bg-white">
-          {/* semi Container */}
-          <div className="w-[220px] h-14 flex items-center gap-[10px]">
-            <div className="w-40 h-14 flex flex-col">
-              <h1 className="text-3xl font-semibold">220</h1>
-              <span className="text-[#8D8D8D] text-sm">
+        <div className="shadow-[0px_0px_16px_0px_#0000000A] bg-[#FFFFFF] rounded-[20px] p-[22px]">
+          <div className="flex gap-[10px] items-center">
+            <div className="flex flex-col gap-[2px]">
+              <h1 className="text-[28px] leading-10 font-semibold text-[#3A3A3A]">
+                220
+              </h1>
+              <span className="text-[#8D8D8D] text-sm font-light">
                 Appointments Completed
               </span>
             </div>
-            <div className="w-11 h-11 rounded-3xl bg-[#F0FDFA] flex  justify-center items-center">
-              <img src={check} alt="check icon" className="w-6 h-6" />
+            <div className="p-[10px] bg-[#F0FDFA] rounded-[22px]">
+              <img src={check} alt="Check icon" className="w-6 h-6" />
             </div>
           </div>
         </div>
