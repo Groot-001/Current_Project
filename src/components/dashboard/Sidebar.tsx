@@ -1,4 +1,4 @@
-import { LayoutGrid } from "lucide-react";
+import { LayoutGrid, type LucideIcon } from "lucide-react";
 import { Clock } from "lucide-react";
 import { Users } from "lucide-react";
 import { Book } from "lucide-react";
@@ -8,10 +8,11 @@ import { CalendarClock } from "lucide-react";
 import { Target } from "lucide-react";
 import { FileText } from "lucide-react";
 import { Settings } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 import { useState } from "react";
 
-const sidebarItems = [
+const sidebarItems: sidebarItem[] = [
   {
     name: "Dashboard",
     path: "/dashboard",
@@ -62,21 +63,23 @@ const sidebarItems = [
     name: "Report",
     path: "/report",
     icon: FileText,
-    extraIcon: Settings,
+    extraIcon: ChevronDown,
   },
   {
     name: "Setting",
     path: "/setting",
     icon: Settings,
-    extraIcon: Settings,
+    extraIcon: ChevronDown,
   },
 ];
 
-// type items = {
-//   key: string;
-//   path: string;
-//   icon: string;
-// };
+type sidebarItem = {
+  name: string;
+  path: string;
+  icon: LucideIcon;
+  extraIcon?: LucideIcon;
+  extraInfo?: string;
+};
 
 const Sidebar = () => {
   const [activeItem, setActiveItem] = useState("Dashboard");
@@ -92,7 +95,7 @@ const Sidebar = () => {
           return (
             <div
               key={ind}
-              className="flex gap-2 pr-[18px]"
+              className="w-full flex items-center pr-[18px] gap-2"
               onClick={() => setActiveItem(item.name)}
             >
               <span
@@ -105,35 +108,56 @@ const Sidebar = () => {
               <div
                 className={
                   isActive
-                    ? "rounded-[4px] py-[10px] pl-1 pr-2 flex gap-3  items-center w-full bg-[#A03879]"
-                    : "rounded-[4px] py-[10px] pl-1 pr-2 flex gap-3  items-center w-full"
+                    ? "flex justify-center items-center w-full bg-[#A03879] rounded-[4px] py-[10px] pl-1 pr-2"
+                    : "flex justify-center items-center w-full py-[10px] pl-1 pr-2"
                 }
               >
-                <Icon
-                  className={isActive ? "text-[#EBEBEB]" : "text-[#242424]"}
-                  strokeWidth={isActive ? 1.5 : 1}
-                  size={24}
-                />
-                <span
+                <div
                   className={
                     isActive
-                      ? "font-normal text-sm text-[#EBEBEB]"
-                      : "font-normal text-sm"
+                      ? "flex gap-3 items-center w-full "
+                      : "flex gap-3 items-center w-full"
                   }
                 >
-                  {item.name}
-                </span>
-                {/* true && something = something */}
-                {/* False && something = false */}
+                  <Icon
+                    className={isActive ? "text-[#EBEBEB]" : "text-[#242424]"}
+                    strokeWidth={isActive ? 1.5 : 1}
+                    size={24}
+                  />
+                  <span
+                    className={
+                      isActive
+                        ? "font-normal text-sm text-[#EBEBEB]"
+                        : "font-normal text-sm"
+                    }
+                  >
+                    {item.name}
+                  </span>
+                  {/* true && something = something */}
+                  {/* False && something = false */}
 
-                {item.extraInfo && (
-                  <div className="rounded-[20px] py-[2px] px-[6px] bg-[#FFBDB6] flex items-center">
-                    <span className="font-medium text-[10px] leading-3 text-[#A03879]">
-                      {item.extraInfo}
-                    </span>
-                  </div>
-                )}
-                {item.extraIcon && <ExtraIcon />}
+                  {item.extraInfo && (
+                    <div className="rounded-[20px] py-[2px] px-[6px] bg-[#FFBDB6] flex items-center">
+                      <span className="font-medium text-[10px] leading-3 text-[#A03879]">
+                        {item.extraInfo}
+                      </span>
+                    </div>
+                  )}
+                </div>
+                <div>
+                  {/* JSX Cannot be undefined, ExtraIcon is conditional so it won't render like normal icon */}
+                  {ExtraIcon && (
+                    <ExtraIcon
+                      size={24}
+                      className={
+                        isActive
+                          ? "text-[#EBEBEB] -rotate-90 "
+                          : "text-[#242424] -rotate-90"
+                      }
+                      strokeWidth={isActive ? 1.5 : 1}
+                    />
+                  )}
+                </div>
               </div>
             </div>
           );
