@@ -6,10 +6,8 @@ import x from "../../assets/x.svg";
 const Toolbar = () => {
   return (
     <>
-      <div className="bg-[#FFFFFF] rounded-3xl pt-8 px-6 pb-4 flex flex-col relative shadow-[0_0_16px_#0000000A]">
-        {/* Ttile Container */}
+      <div className="bg-[#FFFFFF] rounded-3xl pt-8 px-6 pb-4 shadow-[0_0_16px_#0000000A] flex flex-col items-start gap-3">
         <div className="flex flex-col justify-center gap-[14px]">
-          {/* In tailwind css the heading doesnot have any values by default, its like a normal text */}
           <h2 className="font-normal text-[24px] leading-[30px] text-[#3B3B3B]">
             My Dashboard
           </h2>
@@ -19,16 +17,17 @@ const Toolbar = () => {
         </div>
 
         {/* popup Notification */}
-        <div className="rounded-sm pt-1 flex gap-1 bg-[#FFFFFF] shadow-[0px_2px_8px_0px_#00000029] relative">
+        <div className="rounded-sm pt-1 gap-1 bg-[#FFFFFF] shadow-[0px_2px_8px_0px_#00000029] absolute right-0 w-56">
           <div className="flex gap-2 pt-1 px-2 pb-[6px] items-center ">
             <img
               src={check}
               alt="Check icon"
               className="w-[14px] h-[14px] bg-[#07BC0C] rounded-full p-[2px]"
             />
-            <span className="text-[#5C5C5C] font-light text-sm text-center">
+            <span className="text-[#5C5C5C] font-light text-sm text-center items-start">
               Success Notification !
             </span>
+
             <img
               src={x}
               alt="cross icon"
@@ -39,7 +38,7 @@ const Toolbar = () => {
         </div>
 
         {/* Month and filter container */}
-        <div className="flex justify-between px-5 py-[3px]">
+        <div className="flex justify-between px-5 py-[3px] w-full">
           <div className="flex gap-[10px] rounded-full border-[0.6px] border-[#EBEBEB] py-[6px] px-3">
             <div className="flex gap-2 items-center">
               <span className="font-normal text-sm text-[#3B3B3B]">
