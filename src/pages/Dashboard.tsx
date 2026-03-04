@@ -17,7 +17,7 @@ const Dashboard = () => {
           <Sidebar />
 
           {/* Main content area */}
-          <div className="flex-1 flex flex-col">
+          <div className="flex-1 flex flex-col pt-[14px] pl-6 pr-12">
             <Toolbar />
             {/* <Summary /> */}
             {/* <LeadTable /> */}

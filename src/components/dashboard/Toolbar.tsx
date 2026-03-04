@@ -6,7 +6,7 @@ import x from "../../assets/x.svg";
 const Toolbar = () => {
   return (
     <>
-      <div className="bg-[#FFFFFF] rounded-3xl pt-8 px-6 pb-4 shadow-[0_0_16px_#0000000A] flex flex-col items-start gap-3">
+      <div className="bg-[#FFFFFF] rounded-3xl pt-8 px-6 pb-4 shadow-[0_0_16px_#0000000A] flex flex-col items-start gap-3 relative">
         <div className="flex flex-col justify-center gap-[14px]">
           <h2 className="font-normal text-[24px] leading-[30px] text-[#3B3B3B]">
             My Dashboard
