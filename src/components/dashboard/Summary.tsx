@@ -6,7 +6,7 @@ import check from "../../assets/checkgreen.svg";
 const Summary = () => {
   return (
     <>
-      <div className="flex gap-6 ">
+      <div className="flex gap-6">
         <div className="shadow-[0px_0px_16px_0px_#0000000A] bg-[#FFFFFF] rounded-[20px] p-[22px]">
           <div className="flex gap-[10px] items-center">
             <div className="flex flex-col gap-[2px]">

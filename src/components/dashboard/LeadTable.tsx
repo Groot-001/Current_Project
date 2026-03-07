@@ -1,142 +1,102 @@
+const leads = [
+  {
+    id: 1,
+    name: "Sanjay Thapa",
+    phone: "9825665523",
+    source: "Facebook",
+    service: "IVF",
+    address: "Kathmandu, Bhaktapur",
+    createdAt: "16/02/2057",
+  },
+  {
+    id: 2,
+    name: "Kavita Sharma",
+    phone: "9856235654",
+    source: "Twitter",
+    service: "IVF",
+    address: "Pokhara, Lalitpur",
+    createdAt: "16/02/2057",
+  },
+  {
+    id: 3,
+    name: "Dr. Anil Joshi",
+    phone: "9756655235",
+    source: "Instagram",
+    service: "IUI",
+    address: "Biratnagar, Janakpur",
+    createdAt: "16/02/2057",
+  },
+  {
+    id: 4,
+    name: "Nisha Rai",
+    phone: "9825566364",
+    source: "WhatsApp",
+    service: "IVF",
+    address: "Nepalgunj, Butwal",
+    createdAt: "16/02/2057",
+  },
+  {
+    id: 5,
+    name: "Aarav Gurung",
+    phone: "9756542315",
+    source: "Youtube",
+    service: "IVF",
+    address: "Dharan, Itahari",
+    createdAt: "16/02/2057",
+  },
+  {
+    id: 6,
+    name: "Priya Koirala",
+    phone: "9756235468",
+    source: "Youtube",
+    service: "IVF",
+    address: "Hetauda, Bhadrapur",
+    createdAt: "16/02/2057",
+  },
+];
+
+type Column = {
+  key: string;
+  label: string;
+};
+
+const LeadColumns: Column[] = [
+  { key: "id", label: "S.N" },
+  { key: "name", label: "Lead Name" },
+  { key: "phone", label: "Phone No" },
+  { key: "source", label: "Source" },
+  { key: "service", label: "Service" },
+  { key: "address", label: "Address" },
+  { key: "createdAt", label: "Created At" },
+];
+
 const LeadTable = () => {
   return (
     <>
-      <div className="max-w-[755px] w-full bg-[#FFFFFF] rounded-2xl shadow-[0_0_16px_#0000000A] p-6">
-        <div className="flex flex-col">
-          {/* Ttile container */}
-          <div className="pb-3">
-            <span className="text-[#000000] font-normal leading-[22px] text-sm">
-              New Leads Assigned
-            </span>
-          </div>
-
-          {/* Table data container */}
-          <div className="border-[0.4px] border-b-0 border-[#F6EBF2] rounded-t-lg">
-            <table className="w-full">
-              <thead className="text-[#2E2E2E] font-normal leading-[20px] text-sm">
+      <div className="bg-[#FFFFFF] shadow-[0px_0px_16px_0px_#0000000A] rounded-[20px] p-6 ">
+        <div className="flex flex-col gap-3">
+          <span className="font-normal text-[14px] leading-[22px] text-[#000000]">
+            New Leads Assigned
+          </span>
+          <div>
+            <table>
+              <thead>
                 <tr>
-                  <th className="py-[10px] pl-5 whitespace-nowrap">S.N</th>
-                  <th className="py-[10px] pl-[10px] whitespace-nowrap">
-                    Lead Name
-                  </th>
-                  <th className="py-[10px] pl-[10px] whitespace-nowrap">
-                    Phone No
-                  </th>
-                  <th className="py-[10px] pl-[10px] whitespace-nowrap">
-                    Source
-                  </th>
-                  <th className="py-[10px] pl-[10px] whitespace-nowrap">
-                    Service
-                  </th>
-                  <th className="py-[10px] pl-[10px]">Address</th>
-                  <th className="py-[10px] pr-5 pl-[10px] whitespace-nowrap">
-                    Created At
-                  </th>
+                  {LeadColumns.map((col) => (
+                    <th key={col.key}>{col.label}</th>
+                  ))}
                 </tr>
               </thead>
-
-              <tbody className="font-light text-[#585858] text-sm leading-[20px]">
-                <tr className="bg-[#F6EBF22E] border-[#F6EBF2] border-[0.4px] border-l-0 border-r-0 border-b-0">
-                  <td className="py-5 pl-5 whitespace-nowrap">01</td>
-                  <td className="py-5 pl-[10px] whitespace-nowrap">
-                    Sanjay Thapa
-                  </td>
-                  <td className="py-5 pl-[10px] whitespace-nowrap">
-                    9825665523
-                  </td>
-                  <td className="py-5 pl-[10px] whitespace-nowrap">Facebook</td>
-                  <td className="py-5 pl-[10px] whitespace-nowrap">IVF</td>
-                  <td className="py-[10px] pl-[10px] whitespace-nowrap ">
-                    Kathmandu, Bhaktapur
-                  </td>
-                  <td className="py-5 pr-5 pl-[10px] whitespace-nowrap">
-                    16/02/2057
-                  </td>
-                </tr>
-
-                <tr>
-                  <td className="py-5 pl-5 whitespace-nowrap">02</td>
-                  <td className="py-5 pl-[10px] whitespace-nowrap">
-                    Kavita Sharma
-                  </td>
-                  <td className="py-5 pl-[10px] whitespace-nowrap">
-                    9856235654
-                  </td>
-                  <td className="py-5 pl-[10px] whitespace-nowrap">Twitter</td>
-                  <td className="py-5 pl-[10px] whitespace-nowrap">IVF</td>
-                  <td className="py-[10px] pl-[10px]">Pokhara, Lalitpur</td>
-                  <td className="py-5 pl-[10px] pr-5 whitespace-nowrap">
-                    16/02/2057
-                  </td>
-                </tr>
-
-                <tr className="bg-[#F6EBF22E]">
-                  <td className="py-5 pl-5 whitespace-nowrap">03</td>
-                  <td className="py-5 pl-[10px] whitespace-nowrap ">
-                    Dr. Anil Joshi
-                  </td>
-                  <td className="py-5 pl-[10px] whitespace-nowrap ">
-                    9756655235
-                  </td>
-                  <td className="py-5 pl-[10px] whitespace-nowrap ">
-                    Instagram
-                  </td>
-                  <td className="py-5 pl-[10px] whitespace-nowrap ">IUI</td>
-                  <td className="py-[10px] pl-[10px]">Biratnagar, Janakpur</td>
-                  <td className="py-5 pl-[10px] pr-5 whitespace-nowrap ">
-                    16/02/2057
-                  </td>
-                </tr>
-
-                <tr className="bg-[#F6EBF2]">
-                  <td className="py-5 pl-5 whitespace-nowrap">04</td>
-                  <td className="py-5 pl-[10px] whitespace-nowrap">
-                    Nisha Rai
-                  </td>
-                  <td className="py-5 pl-[10px] whitespace-nowrap">
-                    9825566364
-                  </td>
-                  <td className="py-5 pl-[10px] whitespace-nowrap">WhatsApp</td>
-                  <td className="py-5 pl-[10px] whitespace-nowrap">IVF</td>
-                  <td className="py-[10px] pl-[10px]">Nepalgunj, Butwal</td>
-                  <td className="py-5 pl-[10px] pr-5 whitespace-nowrap">
-                    16/02/2057
-                  </td>
-                </tr>
-
-                <tr className="bg-[#F6EBF22E]">
-                  <td className="py-5 pl-5 whitespace-nowrap">05</td>
-                  <td className="py-5 pl-[10px] whitespace-nowrap">
-                    Aarav Gurung
-                  </td>
-                  <td className="py-5 pl-[10px] whitespace-nowrap">
-                    9756542315
-                  </td>
-                  <td className="py-5 pl-[10px] whitespace-nowrap">Youtube</td>
-                  <td className="py-5 pl-[10px] whitespace-nowrap">IVF</td>
-                  <td className="py-[10px] pl-[10px]">Dharan, Itahari</td>
-                  <td className="py-5 pl-[10px] pr-5 whitespace-nowrap">
-                    16/02/2057
-                  </td>
-                </tr>
-
-                <tr>
-                  <td className="py-5 pl-5 whitespace-nowrap">06</td>
-                  <td className="py-5 pl-[10px] whitespace-nowrap">
-                    Priya Koirala
-                  </td>
-                  <td className="py-5 pl-[10px] whitespace-nowrap">
-                    9756235468
-                  </td>
-                  <td className="py-5 pl-[10px] whitespace-nowrap">
-                    9756235468
-                  </td>
-                  <td className="py-5 pl-[10px] whitespace-nowrap">IVF</td>
-                  <td className="py-[10px] pl-[10px]">Hetauda, Bhadrapur</td>
-                  <td className="py-5 pl-[10px] pr-5 whitespace-nowrap">
-                    16/02/2057
-                  </td>
-                </tr>
+              <tbody>
+                {leads.map((lead, ind) => {
+                  return (
+                    <tr key={ind + 1}>
+                      {LeadColumns.map((col) => (
+                        <td>{(lead as any)[col.key]}</td>
+                      ))}
+                    </tr>
+                  );
+                })}
               </tbody>
             </table>
           </div>

@@ -105,7 +105,7 @@ const FollowUpTaskTable = () => {
           <div className="border-[0.4px] border-[#F6EBF2] border-b-0 rounded-t-[10px] bg-[#FFFFFF]">
             <table className="w-full">
               <thead>
-                {/* So basically the table is one structure and thead is for the table header part, the tr is table row which means we are creating a single row for the header. Inside that row we are craeting th which means table header which is header cell like the placeholder for the data of that row */}
+                {/* So basically the table is one structure and thead is for the table header part, the tr is table row which means we are creating a single row for the header. Inside that row we are creating th which means table header which is header cell like the placeholder for the data of that row */}
                 <tr className="border-[#F6EBF2] border-b-[0.4px]">
                   {FollowUpTaskColumn.map((col) => (
                     <th

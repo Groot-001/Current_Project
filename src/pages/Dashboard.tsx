@@ -1,10 +1,11 @@
 import Header from "../components/dashboard/Header";
 import Sidebar from "../components/dashboard/Sidebar";
 import Toolbar from "../components/dashboard/Toolbar";
-// import Summary from "../components/dashboard/Summary";
-// import LeadTable from "../components/dashboard/LeadTable";
-// import TasksOverview from "../components/dashboard/TasksOverview";
-// import FollowUpTaskTable from "../components/dashboard/FollowUpTaskTable";
+import Summary from "../components/dashboard/Summary";
+import LeadTable from "../components/dashboard/LeadTable";
+import TasksOverview from "../components/dashboard/TasksOverview";
+import FollowUpTaskTable from "../components/dashboard/FollowUpTaskTable";
+import Profile from "../components/dashboard/Profile";
 
 const Dashboard = () => {
   return (
@@ -17,12 +18,13 @@ const Dashboard = () => {
           <Sidebar />
 
           {/* Main content area */}
-          <div className="flex-1 flex flex-col pt-[14px] pl-6 pr-12">
-            <Toolbar />
-            {/* <Summary /> */}
-            {/* <LeadTable /> */}
-            {/* <TasksOverview /> */}
-            {/* <FollowUpTaskTable /> */}
+          <div className="flex-1 flex flex-col pt-[14px] pl-6 pr-12 gap-6">
+            {/* <Toolbar />
+            <Summary />
+            <LeadTable />
+            <TasksOverview />
+            <FollowUpTaskTable /> */}
+            <Profile />
           </div>
         </div>
       </div>
