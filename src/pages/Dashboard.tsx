@@ -19,12 +19,12 @@ const Dashboard = () => {
 
           {/* Main content area */}
           <div className="flex-1 flex flex-col pt-[14px] pl-6 pr-12 gap-6">
-            {/* <Toolbar />
-            <Summary />
-            <LeadTable />
-            <TasksOverview />
-            <FollowUpTaskTable /> */}
-            <Profile />
+            <Toolbar />
+            {/* <Summary /> */}
+            {/* <LeadTable /> */}
+            {/* <TasksOverview /> */}
+            {/* <FollowUpTaskTable /> * */}
+            {/* <Profile /> */}
           </div>
         </div>
       </div>
