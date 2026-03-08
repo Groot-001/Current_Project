@@ -8,6 +8,7 @@ import FollowUpTaskTable from "../components/dashboard/FollowUpTaskTable";
 import Profile from "../components/dashboard/Profile";
 import ToolbarCard from "../components/dashboard/ToolbarCard";
 import WorkLoadSnapshot from "../components/dashboard/WorkLoadSnapshot";
+import AgentStatusTable from "../components/dashboard/AgentStatusTable";
 
 const Dashboard = () => {
   return (
@@ -31,7 +32,8 @@ const Dashboard = () => {
             {/* <TasksOverview /> */}
             {/* <FollowUpTaskTable /> * */}
             {/* <Profile /> */}
-            <WorkLoadSnapshot />
+            {/* <WorkLoadSnapshot /> */}
+            <AgentStatusTable />
           </div>
         </div>
       </div>
