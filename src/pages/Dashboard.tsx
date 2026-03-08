@@ -6,6 +6,7 @@ import LeadTable from "../components/dashboard/LeadTable";
 import TasksOverview from "../components/dashboard/TasksOverview";
 import FollowUpTaskTable from "../components/dashboard/FollowUpTaskTable";
 import Profile from "../components/dashboard/Profile";
+import ToolbarCard from "../components/dashboard/ToolbarCard";
 
 const Dashboard = () => {
   return (
@@ -19,7 +20,11 @@ const Dashboard = () => {
 
           {/* Main content area */}
           <div className="flex-1 flex flex-col pt-[14px] pl-6 pr-12 gap-6">
-            <Toolbar />
+            {/* <Toolbar /> */}
+            <ToolbarCard
+              description="Overview of your leads, tasks, and bookings"
+              title="My Dashboard"
+            />
             {/* <Summary /> */}
             {/* <LeadTable /> */}
             {/* <TasksOverview /> */}
