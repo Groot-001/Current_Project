@@ -30,10 +30,10 @@ const Dashboard = () => {
             {/* <Summary /> */}
             {/* <LeadTable /> */}
             {/* <TasksOverview /> */}
-            {/* <FollowUpTaskTable /> * */}
+            <FollowUpTaskTable />
             {/* <Profile /> */}
             {/* <WorkLoadSnapshot /> */}
-            <AgentStatusTable />
+            {/* <AgentStatusTable /> */}
           </div>
         </div>
       </div>
