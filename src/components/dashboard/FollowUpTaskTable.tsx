@@ -321,6 +321,9 @@ const FollowUpTaskTable = () => {
   const [isDropDownOpen, setisDropDownOpen] = useState(false);
 
   const start = (currentPage - 1) * rowPerPage; // Start row
+  {
+    console.log(start);
+  }
   const end = currentPage * rowPerPage; // End row
   const visibleRows = leads.slice(start, end);
   const totalPages = Math.round(totalRows / rowPerPage);
@@ -386,7 +389,7 @@ const FollowUpTaskTable = () => {
         </div>
         <div className="flex justify-between gap-[10px]">
           <span>
-            {start}-{end} of {totalRows}
+            {start + 1}-{end} of {totalRows}
           </span>
           <div className="flex gap-[10px]">
             <div className="flex">
