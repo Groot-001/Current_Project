@@ -9,6 +9,7 @@ import Profile from "../components/dashboard/Profile";
 import ToolbarCard from "../components/dashboard/ToolbarCard";
 import WorkLoadSnapshot from "../components/dashboard/WorkLoadSnapshot";
 import AgentStatusTable from "../components/dashboard/AgentStatusTable";
+import Notifications from "../components/dashboard/Notifications";
 
 const Dashboard = () => {
   return (
@@ -30,10 +31,11 @@ const Dashboard = () => {
             {/* <Summary /> */}
             {/* <LeadTable /> */}
             {/* <TasksOverview /> */}
-            <FollowUpTaskTable />
+            {/* <FollowUpTaskTable /> */}
             {/* <Profile /> */}
             {/* <WorkLoadSnapshot /> */}
             {/* <AgentStatusTable /> */}
+            <Notifications />
           </div>
         </div>
       </div>
