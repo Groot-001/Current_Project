@@ -10,6 +10,7 @@ import ToolbarCard from "../components/dashboard/ToolbarCard";
 import WorkLoadSnapshot from "../components/dashboard/WorkLoadSnapshot";
 import AgentStatusTable from "../components/dashboard/AgentStatusTable";
 import Notifications from "../components/dashboard/Notifications";
+import BulkActionsMenu from "../components/dashboard/bulk-actions/BulkActionsMenu";
 
 const Dashboard = () => {
   return (
@@ -35,7 +36,8 @@ const Dashboard = () => {
             {/* <Profile /> */}
             {/* <WorkLoadSnapshot /> */}
             {/* <AgentStatusTable /> */}
-            <Notifications />
+            {/* <Notifications /> */}
+            <BulkActionsMenu />
           </div>
         </div>
       </div>
