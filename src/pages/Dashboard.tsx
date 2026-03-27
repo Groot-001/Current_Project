@@ -11,6 +11,8 @@ import WorkLoadSnapshot from "../components/dashboard/WorkLoadSnapshot";
 import AgentStatusTable from "../components/dashboard/AgentStatusTable";
 import Notifications from "../components/dashboard/Notifications";
 import BulkActionsMenu from "../components/dashboard/bulk-actions/BulkActionsMenu";
+import Leads from "../components/leads/Leads";
+import DeleteUser from "../components/leads/DeleteUser";
 
 const Dashboard = () => {
   return (
@@ -37,7 +39,9 @@ const Dashboard = () => {
             {/* <WorkLoadSnapshot /> */}
             {/* <AgentStatusTable /> */}
             {/* <Notifications /> */}
-            <BulkActionsMenu />
+            {/* <BulkActionsMenu /> */}
+            {/* <Leads /> */}
+            <DeleteUser />
           </div>
         </div>
       </div>
