@@ -1,0 +1,22 @@
+import { ChevronRight } from "lucide-react";
+
+const Channel = () => {
+  return (
+    <div className="bg-[#FFFFFF] shadow-[0px_0px_2px_0px_#0000004D] rounded-[14px] py-1 flex flex-col">
+      <div className="py-3 px-5 flex justify-between">
+        <span className="text-[#5C5C5C] font-normal text-sm ">SMS</span>
+        <ChevronRight size={20} />
+      </div>
+      <div className="py-3 px-5 flex justify-between">
+        <span className="text-[#5C5C5C] font-normal text-sm ">WhatsApp</span>
+        <ChevronRight size={20} />
+      </div>
+      <div className="py-3 px-5 flex justify-between">
+        <span className="text-[#5C5C5C] font-normal text-sm ">E-mail</span>
+        <ChevronRight size={20} />
+      </div>
+    </div>
+  );
+};
+
+export default Channel;
