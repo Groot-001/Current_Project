@@ -32,7 +32,7 @@ const Dashboard = () => {
               title="My Dashboard"
             /> */}
             {/* <Summary /> */}
-            {/* <LeadTable /> */}
+            <LeadTable />
             {/* <TasksOverview /> */}
             {/* <FollowUpTaskTable /> */}
             {/* <Profile /> */}
@@ -41,7 +41,7 @@ const Dashboard = () => {
             {/* <Notifications /> */}
             {/* <BulkActionsMenu /> */}
             {/* <Leads /> */}
-            <DeleteUser />
+            {/* <DeleteUser /> */}
           </div>
         </div>
       </div>
