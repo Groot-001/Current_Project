@@ -1,9 +1,7 @@
 import { useState } from "react";
-import { ChevronLeft, Download, Plus } from "lucide-react";
 import { ChevronRight } from "lucide-react";
-import { Search } from "lucide-react";
-import { Calendar } from "lucide-react";
-import { Funnel } from "lucide-react";
+import { ChevronLeft } from "lucide-react";
+import Table from "./Table";
 
 const leads = [
   {
@@ -116,32 +114,28 @@ const leads = [
   },
 ];
 
-type Column = {
-  key: string;
-  label: string;
-};
-
-const LeadColumns: Column[] = [
-  { key: "id", label: "S.N" },
-  { key: "name", label: "Lead Name" },
-  { key: "phone", label: "Phone No" },
-  { key: "source", label: "Source" },
-  { key: "service", label: "Service" },
-  { key: "address", label: "Address" },
-  { key: "createdAt", label: "Created At" },
+const LeadColumns = [
+  { key: "id", header: "S.N" },
+  { key: "name", header: "Lead Name" },
+  { key: "phone", header: "Phone No" },
+  { key: "source", header: "Source" },
+  { key: "service", header: "Service" },
+  { key: "address", header: "Address" },
+  { key: "createdAt", header: "Created At" },
 ];
 
 const LeadTable = () => {
   const totalRow = leads.length;
-
   const [currentPage, setCurrentPage] = useState(1);
-  const [totalPage, setTotalPage] = useState(10);
   const [rowPerPage, setrowPerPage] = useState(5);
   const [showDropDown, setShowDropDown] = useState(false);
-  const start = currentPage * 0 * rowPerPage;
-  const end = rowPerPage;
+  const start = (currentPage - 1) * rowPerPage + 1;
+  const end = Math.min(rowPerPage * currentPage, totalRow);
+  const paginatedData = leads.slice(start, end);
+  const totalPage = Math.ceil(totalRow / rowPerPage);
 
-  const renderItems = leads.slice(start, end);
+  const classname = "bg-white py-2 px-5";
+
   return (
     <>
       <div className="bg-[#FFFFFF] shadow-[0px_0px_16px_0px_#0000000A] rounded-[20px] p-6 flex gap-6">
@@ -149,82 +143,20 @@ const LeadTable = () => {
           <span className="font-normal text-[14px] leading-[22px] text-[#000000]">
             New Leads Assigned
           </span>
-          {/* Search and add features */}
-          <div className="py-[10px] px-5 flex justify-between items-center">
-            <div className="flex gap-2 bg-[#FFFFFF] border-[#EBEBEB] border-[0.5px] rounded-full py-3 px-4">
-              <Search size={20} />
-              <span className="text-[#555555] font-light text-sm">Search</span>
-            </div>
-            <div className="flex gap-4">
-              <div className="flex items-center gap-1">
-                <span className="text-[#3B3B3B] font-normal text-sm">
-                  Filter by Date
-                </span>
-                <div className="border-[#EBEBEB] border-[0.5px] rounded-full  flex gap-2 py-3 px-8">
-                  <span className="text-[#585858] font-light text-sm">
-                    24/02/2022
-                  </span>
-                  <Calendar size={20} stroke="#AFAFAF" strokeWidth={1} />
-                </div>
-              </div>
-              <div className="border-[#EBEBEB] border-[0.6px] py-2 px-3 rounded-full flex gap-2 items-center">
-                <div className="flex gap-2">
-                  <Funnel size={20} />
-                  <span className="text-[#3B3B3B] font-normal text-sm text-center">
-                    Filters
-                  </span>
-                </div>
-              </div>
-              <div className="border-[#EBEBEB] border-[0.6px] py-2 px-3 rounded-full flex gap-2 items-center">
-                <div className="flex gap-2">
-                  <Download size={20} />
-                  <span className="text-[#2A2A2A] font-normal text-sm text-center">
-                    Export
-                  </span>
-                </div>
-              </div>
-              <div className="border-[#9F9F9F] border-[0.6px] rounded-full bg-[#A03879] flex gap-2 py-2 px-[14px] items-center">
-                <Plus size={20} stroke="#FFFFFF" strokeWidth={1.5} />
-                <span className="text-[#FFFFFF] font-normal text-sm text-center">
-                  Add
-                </span>
-              </div>
-            </div>
-          </div>
+
           {/* Table container */}
           <div className="border-[#F6EBF2] border-[0.4px] border-b-0 rounded-t-lg">
-            <table className="">
-              <thead className="border-[#F6EBF2] border-b-[0.4px]">
-                <tr className="">
-                  {LeadColumns.map((col) => (
-                    <th
-                      className="py-[10px] px-5 font-normal text-[#2E2E2E] text-sm"
-                      key={col.key}
-                    >
-                      {col.label}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {renderItems.map((lead, ind) => {
-                  return (
-                    <tr key={ind + 1}>
-                      {LeadColumns.map((col) => (
-                        <td className="py-[10px] px-5">
-                          {(lead as any)[col.key]}
-                        </td>
-                      ))}
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
+            <Table
+              columns={LeadColumns}
+              data={paginatedData}
+              classname={classname}
+            />
           </div>
+
           {/* Pagination Container */}
           <div className="rounded-b-lg py-3 px-5 bg-[#EBEBEB66] flex justify-between">
             <span>
-              {start + 1} - {end} of {totalRow}
+              {start} - {end} of {totalRow}
             </span>
 
             <div className="flex gap-2">

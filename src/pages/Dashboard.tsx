@@ -32,9 +32,9 @@ const Dashboard = () => {
               title="My Dashboard"
             /> */}
             {/* <Summary /> */}
-            <LeadTable />
+            {/* <LeadTable /> */}
             {/* <TasksOverview /> */}
-            {/* <FollowUpTaskTable /> */}
+            <FollowUpTaskTable />
             {/* <Profile /> */}
             {/* <WorkLoadSnapshot /> */}
             {/* <AgentStatusTable /> */}

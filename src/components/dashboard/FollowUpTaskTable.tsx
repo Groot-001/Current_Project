@@ -1,7 +1,6 @@
-import { ChevronLeft } from "lucide-react";
-import { ChevronRight } from "lucide-react";
-import { ChevronDown } from "lucide-react";
-import { useState } from "react";
+import Pagination from "../shared/pagination/Pagination";
+import Table from "./Table";
+import { usePagination } from "../shared/pagination/usePagination";
 
 const leads = [
   {
@@ -279,14 +278,14 @@ const leads = [
 // This is used to define the shape of an object.
 type Column = {
   header: string;
-  key: keyof (typeof leads)[number] | "index";
+  key: string;
 };
 
 // This is for the header which is blueprint for the table
 const FollowUpTaskColumn: Column[] = [
   {
     header: "S.N", // what column should be called.
-    key: "index", // what data will it connect to.
+    key: "id", // what data will it connect to.
   },
   {
     header: "Lead Name",
@@ -315,18 +314,23 @@ const FollowUpTaskColumn: Column[] = [
 ];
 
 const FollowUpTaskTable = () => {
-  const totalRows = leads.length;
-  const [currentPage, setCurrentPage] = useState(1);
-  const [rowPerPage, setRowPerPage] = useState(5);
-  const [isDropDownOpen, setisDropDownOpen] = useState(false);
+  const classname = "py-2 px-3";
 
-  const start = (currentPage - 1) * rowPerPage; // Start row
-  {
-    console.log(start);
-  }
-  const end = currentPage * rowPerPage; // End row
-  const visibleRows = leads.slice(start, end);
-  const totalPages = Math.round(totalRows / rowPerPage);
+  const totalItems = leads.length;
+
+  const {
+    page,
+    totalPages,
+    startIndex,
+    endIndex,
+    rowsPerPage,
+    setPage,
+    changeRowsPerPage,
+  } = usePagination({
+    totalItems,
+  });
+
+  const paginatedData = leads.slice(startIndex, endIndex);
 
   return (
     <>
@@ -337,89 +341,23 @@ const FollowUpTaskTable = () => {
           </span>
 
           <div className="border-[0.4px] border-[#F6EBF2] border-b-0 rounded-t-[10px] bg-[#FFFFFF]">
-            <table className="w-full">
-              <thead>
-                {/* So basically the table is one structure and thead is for the table header part, the tr is table row which means we are creating a single row for the header. Inside that row we are creating th which means table header which is header cell like the placeholder for the data of that row */}
-                <tr className="border-[#F6EBF2] border-b-[0.4px]">
-                  {FollowUpTaskColumn.map((col) => (
-                    <th
-                      key={col.key}
-                      className="font-normal text-sm text-[#2E2E2E] px-5 py-[10px]"
-                    >
-                      {col.header}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-
-              {/* In the header we have used tr first because we only need one row and all the things will be inside that row only but in the body we need more rows which will be defined by the number of objects in the array so we are mapping the leads array to define the number of rows being used. */}
-              <tbody>
-                {visibleRows.map((lead, ind) => {
-                  // Here we are mapping the leads to define the number of rows used in the table.
-
-                  let rowStyle = "";
-                  if (ind === 0 || ind === 2 || ind === 4)
-                    rowStyle = "bg-[#F6EBF22E]";
-                  else if (ind === 3) rowStyle = "bg-[#F6EBF2]";
-                  else rowStyle = "bg-[#FFFFFF]";
-
-                  return (
-                    <tr key={lead.id} className={rowStyle}>
-                      {FollowUpTaskColumn.map((col) => {
-                        return (
-                          // Here we are using the followuptaskcolumn because it will decide the number of cols used in the table and for each table we are creating a description cell like placeholder.
-                          <td
-                            key={col.key}
-                            className="font-light text-sm text-[#585858] px-5 py-5"
-                          >
-                            {/* here we are using the col.key === index so that because the key is index which will not match any property from lead so if the value is index then we will just show the index number which will be S.N */}
-                            {col.key === "index"
-                              ? ind + 1
-                              : (lead as any)[col.key]}
-                            {/* lead[col.key],this is called dynamic accessing of the data. */}
-                          </td>
-                        );
-                      })}
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
+            <Table
+              columns={FollowUpTaskColumn}
+              data={paginatedData}
+              classname={classname}
+            />
           </div>
-        </div>
-        <div className="flex justify-between gap-[10px]">
-          <span>
-            {start + 1}-{end} of {totalRows}
-          </span>
-          <div className="flex gap-[10px]">
-            <div className="flex">
-              <span>Rows per page:</span>
-              <span>{rowPerPage}</span>
-              <ChevronDown onClick={() => setisDropDownOpen(!isDropDownOpen)} />
-              {isDropDownOpen && (
-                <select
-                  name="rowperpage"
-                  id="rowperpage"
-                  value={rowPerPage}
-                  onChange={(e) => setRowPerPage(Number(e.target.value))}
-                  // Here Number is given because when reading the value from a state it returns a string.
-                  className="border border-gray-300 rounded-md px-3 py-1 text-sm bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                >
-                  <option value="5">5</option>
-                  <option value="10">10</option>
-                  <option value="15">15</option>
-                  <option value="20">20</option>
-                </select>
-              )}
-            </div>
-            <div className="flex">
-              <ChevronLeft onClick={() => setCurrentPage(currentPage - 1)} />
-              <span>
-                {currentPage} / {totalPages}
-              </span>
-              <ChevronRight onClick={() => setCurrentPage(currentPage + 1)} />
-            </div>
-          </div>
+          {/* Pagination Logic */}
+          <Pagination
+            page={page}
+            onPageChange={setPage}
+            totalPages={totalPages}
+            start={startIndex}
+            end={endIndex}
+            totalItems={totalItems}
+            rowsPerPage={rowsPerPage}
+            onChangeRowsPerPage={changeRowsPerPage}
+          />
         </div>
       </div>
     </>
